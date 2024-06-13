@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Stocks</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Cooper, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ff69b4;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #ff69b4;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ff69b4;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .back-button {
+            font-family: Cooper, sans-serif;
+            display: inline-block;
+            text-align: center;
+            color: white;
+            border: 2px solid pink;
+            background-color: pink;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .back-button:hover {
+            background-color: white;
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>Current Item Stocks</h1>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Stock</th>
+            <th>Add</th>
+            <th>Image</th>
+        </tr>
+        <tr>
+            <td>Jeans1</td>
+            <td id="stock-jeans1">6</td>
+            <td><button onclick="addItem('jeans1')">Add</button></td>
+            <td><img src="jeans1.jpeg" alt="Jeans1"></td>
+        </tr>
+        <tr>
+            <td>Jeans2</td>
+            <td id="stock-jeans2">5</td>
+            <td><button onclick="addItem('jeans2')">Add</button></td>
+            <td><img src="jeans2.jpg" alt="Jeans2"></td>
+        </tr>
+        <tr>
+            <td>Jeans3</td>
+            <td id="stock-jeans3">9</td>
+            <td><button onclick="addItem('jeans3')">Add</button></td>
+            <td><img src="jeans3.jpeg" alt="Jeans3"></td>
+        </tr>
+        <tr>
+            <td>Jeans4</td>
+            <td id="stock-jeans4">8</td>
+            <td><button onclick="addItem('jeans4')">Add</button></td>
+            <td><img src="jeans4.jpeg" alt="Jeans4"></td>
+        </tr>
+        <tr>
+            <td>Jeans5</td>
+            <td id="stock-jeans5">7</td>
+            <td><button onclick="addItem('jeans5')">Add</button></td>
+            <td><img src="jeans5.jpeg" alt="Jeans5"></td>
+        </tr>
+        <tr>
+            <td>Shirt1</td>
+            <td id="stock-shirt1">5</td>
+            <td><button onclick="addItem('shirt1')">Add</button></td>
+            <td><img src="shirt1.jpeg" alt="Shirt1"></td>
+        </tr>
+        <tr>
+            <td>Shirt2</td>
+            <td id="stock-shirt2">9</td>
+            <td><button onclick="addItem('shirt2')">Add</button></td>
+            <td><img src="shirt2.jpg" alt="Shirt2"></td>
+        </tr>
+        <tr>
+            <td>Shirt3</td>
+            <td id="stock-shirt3">7</td>
+            <td><button onclick="addItem('shirt3')">Add</button></td>
+            <td><img src="shirt3.jpg" alt="Shirt3"></td>
+        </tr>
+        <tr>
+            <td>Shirt4</td>
+            <td id="stock-shirt4">9</td>
+            <td><button onclick="addItem('shirt4')">Add</button></td>
+            <td><img src="shirt4.jpeg" alt="Shirt4"></td>
+        </tr>
+        <tr>
+            <td>Shirt5</td>
+            <td id="stock-shirt5">7</td>
+            <td><button onclick="addItem('shirt5')">Add</button></td>
+            <td><img src="shirt5.jpeg" alt="Shirt5"></td>
+        </tr>
+        <tr>
+            <td>Perfume1</td>
+            <td id="stock-perfume1">8</td>
+            <td><button onclick="addItem('perfume1')">Add</button></td>
+            <td><img src="perfume1.jpeg" alt="Perfume1"></td>
+        </tr>
+        <tr>
+            <td>Perfume2</td>
+            <td id="stock-perfume2">9</td>
+            <td><button onclick="addItem('perfume2')">Add</button></td>
+            <td><img src="perfume2.jpeg" alt="Perfume2"></td>
+        </tr>
+        <tr>
+            <td>Perfume3</td>
+            <td id="stock-perfume3">10</td>
+            <td><button onclick="addItem('perfume3')">Add</button></td>
+            <td><img src="perfume3.jpeg" alt="Perfume3"></td>
+        </tr>
+        <tr>
+            <td>Perfume4</td>
+            <td id="stock-perfume4">15</td>
+            <td><button onclick="addItem('perfume4')">Add</button></td>
+            <td><img src="perfume4.jpeg" alt="Perfume4"></td>
+        </tr>
+        <tr>
+            <td>Perfume5</td>
+            <td id="stock-perfume5">8</td>
+            <td><button onclick="addItem('perfume5')">Add</button></td>
+            <td><img src="perfume5.jpeg" alt="Perfume5"></td>
+        </tr>
+        <tr>
+            <td>Sando1</td>
+            <td id="stock-sando1">5</td>
+            <td><button onclick="addItem('sando1')">Add</button></td>
+            <td><img src="sando1.jpeg" alt="sando1"></td>
+        </tr>
+      <tr>
+            <td>Sando2</td>
+            <td id="stock-sando2">7</td>
+            <td><button onclick="addItem('sando2')">Add</button></td>
+            <td><img src="sando2.jpeg" alt="sando2"></td>
+        </tr>
+        <tr>
+            <td>Sando3</td>
+            <td id="stock-sando3">9</td>
+            <td><button onclick="addItem('sando3')">Add</button></td>
+            <td><img src="sando3.jpeg" alt="sando3"></td>
+        </tr>
+      <tr>
+            <td>Sando4</td>
+            <td id="stock-sando4">4</td>
+            <td><button onclick="addItem('sando4')">Add</button></td>
+            <td><img src="sando4.jpeg" alt="sando4"></td>
+        </tr>
+      <tr>
+            <td>Sando5</td>
+            <td id="stock-sando5">7</td>
+            <td><button onclick="addItem('sando5')">Add</button></td>
+            <td><img src="sando5.jpeg" alt="sando5"></td>
+        </tr>
+      <tr>
+            <td>Toys1</td>
+            <td id="stock-toys1">10</td>
+            <td><button onclick="addItem('toys1')">Add</button></td>
+            <td><img src="toys1.jpeg" alt="toys1"></td>
+        </tr>
+      <tr>
+            <td>Toys2</td>
+            <td id="stock-toys2">8</td>
+            <td><button onclick="addItem('toys2')">Add</button></td>
+            <td><img src="toys2.jpeg" alt="toys2"></td>
+        </tr>
+      <tr>
+            <td>Toys3</td>
+            <td id="stock-toys3">9</td>
+            <td><button onclick="addItem('toys3')">Add</button></td>
+            <td><img src="toys3.jpeg" alt="toys3"></td>
+        </tr>
+      <tr>
+            <td>Toys4</td>
+            <td id="stock-toys4">6</td>
+            <td><button onclick="addItem('toys4')">Add</button></td>
+            <td><img src="toys4.jpeg" alt="toys4"></td>
+        </tr>
+      <tr>
+            <td>Toys5</td>
+            <td id="stock-toys5">10</td>
+            <td><button onclick="addItem('toys5')">Add</button></td>
+            <td><img src="toys5.jpeg" alt="toys5"></td>
+        </tr>
+      
+      
+      
+    </table>
+
+    <button class="back-button" onclick="window.location.href='storenilester.html'">Back to Store</button>
+  <br>
+  
+    <script>
+  
+  
+     const stock = {
+            jeans1: 6,
+            jeans2: 5,
+            jeans3: 9,
+            jeans4: 8,
+            jeans5: 7,
+            shirt1: 5,
+            shirt2: 9,
+            shirt3: 7,
+            shirt4: 9,
+            shirt5: 7,
+            perfume1: 8,
+            perfume2: 9,
+            perfume3: 10,
+            perfume4: 15,
+            perfume5: 8,
+            sando1: 5,
+            sando2: 7,
+            sando3: 9,
+            sando4: 4,
+            sando5: 7,
+            toys1: 10,
+            toys2: 8,
+            toys3: 9,
+            toys4: 6,
+            toys5: 10
+};
+
+        function updateStockDisplay() {
+            for (const item in stock) {
+                document.getElementById('stock-' + item).innerText = stock[item];
+            }
+        }
+
+        function addItem(itemName) {
+            stock[itemName]++;
+            updateStockDisplay();
+            updateStorenilesterStock(itemName, 1); 
+        }
+
+        function addNewItemToHomePage(itemName) {
+            addItem(itemName);
+            
+            const newItemElement = document.createElement('div');
+            newItemElement.textContent = itemName + ' added!';
+            document.getElementById('home-page-items').appendChild(newItemElement);
+        }
+
+        function updateStorenilesterStock(itemName, quantity) {
+            const storenilesterStock = window.opener.stock; 
+            storenilesterStock[itemName] -= quantity;
+            window.opener.updateStockDisplay(); 
+        }
+
+        window.onload = updateStockDisplay;
+    </script>
+</body>
+</html>

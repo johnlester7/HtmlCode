@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('moon.gif'); /* Replace 'your-gif-background.gif' with the path to your GIF */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding-top: 50px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 10px;
+        }
+        .link-container {
+            flex: 0 1 calc(50% - 20px); /* Two columns with some spacing */
+            margin: 10px;
+            text-align: center;
+            border: 2px solid #3498db; /* Border */
+            border-radius: 10px; /* Rounded corners */
+        }
+        .link {
+            display: flex;
+            flex-direction: column; /* Arrange items in a column */
+            align-items: center;
+            font-size: 18px;
+            transition: background-color 0.3s, color 0.3s;
+            padding: 20px;
+            text-decoration: none;
+            color: white; /* Text color */
+            text-shadow: 0 0 50px lightblue; /* Glowing effect */
+        }
+        .link img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px; /* Space between image and text */
+            transition: transform 0.3s; /* Add transition for hover effect */
+        }
+        .link:hover {
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 10px;
+        }
+        .link:hover img {
+            filter: brightness(0) invert(1);
+            transform: scale(1.1); /* Increase size slightly on hover */
+        }
+        .jumbotron {
+            background-image: url('moon2.gif'); /* Background image for My Portfolio */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+            padding: 50px 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: textAnimation 2s infinite alternate; /* Animation */
+        }
+        .jumbotron h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 50px lightblue; /* Glowing effect */
+        }
+        .jumbotron p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 50px lightblue; /* Glowing effect */
+        }
+        
+        @keyframes textAnimation {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>MY PORTFOLIO</h1>
+            <p>Welcome to my portfolio</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="link-container">
+            <a class="link" href="Villanueva_JohnLester.html" target="_blank">
+                <img src="regform.png" alt="Project 1 Image">
+                REGISTRATION FORM
+            </a>
+        </div>
+        <div class="link-container">
+            <a class="link" href="menu3.html" target="_blank">
+                <img src="resmenu.png" alt="Project 2 Image">
+                RESTAURANT MENU
+            </a>
+        </div>
+        <div class="link-container">
+            <a class="link" href="Villanueva_JohnLester_Resume.html" target="_blank">
+                <img src="resume.png" alt="Project 3 Image">
+                RESUME
+            </a>
+        </div>
+        <div class="link-container">
+            <a class="link" href="storenilester.html" target="_blank">
+                <img src="store.png" alt="Project 4 Image">
+                STORE
+            </a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
